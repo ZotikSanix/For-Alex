@@ -29,14 +29,14 @@ int main()
     printf("\n");
     printf("str_direct:\n");
  
-    direct_sorting(str_direct, size);
+    bubble_sorting(str_direct, size, my_str_cmp);
     printing_of_masives(str_direct, size);
     
     
     printf("\n");
     printf("str_feedback:\n");
    
-    reverse_sorting(str_feedback, size);
+    bubble_sorting(str_feedback, size, reverse_comp);
     printing_of_masives(str_feedback, size);
     
     return 0;
