@@ -4,18 +4,18 @@
 #include "function.h"
 
 
-void bubble_sorting(const char** pstr, int size, int (*comparison_func)(const char* str1, const char* str2))
+void bubble_sorting(Tex_inf *stk, int (*comparison_func)(char* str1, char* str2))
 {
-    for (int j = 0; j < (size -1); j++)
+    for (size_t j = 0; j < (stk->Line -1); j++)
     {
-        for (int i = 0; i < (size - 1); i++)
+        for (size_t i = 0; i < (stk->Line - 1); i++)
         {
-            int res = comparison_func(pstr[i], pstr[i+1]);
+            int res = comparison_func(stk->LineText[i], stk->LineText[i+1]);
             if (res > 0)
             {
-                const char* buffer = pstr[i];
-                pstr[i] = pstr[i+1];
-                pstr[i+1] = buffer;
+                char* buffer = stk->LineText[i];
+                stk->LineText[i] = stk->LineText[i+1];
+                stk->LineText[i+1] = buffer;
             }
         }
     }

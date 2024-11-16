@@ -3,9 +3,9 @@
 
 #include "function.h"
 
-void printing_of_masives(const char** pstr, const int size)
+void printing_of_masives(char** pstr, size_t size)
 {
-    for (int i = 0; i<size; i++)
+    for (size_t i = 0; i < size; i++)
         {
             printf("%s\n", pstr[i]);
         }

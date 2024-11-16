@@ -3,7 +3,7 @@
 
 #include "function.h"
 
-int my_str_cmp(const char* str1, const char* str2)
+int my_str_cmp(char* str1, char* str2)
  {
     int i = 0;
     while(str1[i] && str2[i])
@@ -15,7 +15,7 @@ int my_str_cmp(const char* str1, const char* str2)
     return 0;
  }
 
- int reverse_comp(const char* str1, const char* str2)
+ int reverse_comp(char* str1, char* str2)
 {
     int i = strlen(str1) - 1, j = strlen(str2) - 1;
     while (i >= 0 && j >= 0)

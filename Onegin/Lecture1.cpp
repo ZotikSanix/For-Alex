@@ -53,7 +53,6 @@ size_t my_strlen(const char* pstr)
 int my_strcmp(char* pstr1, char* pstr2)
 {
     int  i = 0;
-    int flag = 0;
 
     while ((pstr1[i] != '\0') && (pstr1[i] == pstr2[i]))
     {
